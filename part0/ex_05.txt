@@ -1,0 +1,12 @@
+title Loading SPA
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa
+server-->browser: HTML-code
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->browser: main.css
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+server-->browser: spa.js
+note right of browser: browser starts executing js-code\nwhich requests JSON data from the server
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->browser: [{"content":"Messi GOAT","date":"2022-12-20T05:29:56.063Z"}, ...]
+note right of browser: browser executes the event handler\nthat renders note to display

@@ -1,0 +1,14 @@
+title Loading Notes App
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+server-->browser: HTTP Status code: 302: Redirect to 'Location'
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+server-->browser: HTML-code
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server-->browser: main.css
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+server-->browser: main.js
+note right of browser: browser starts executing \njs-code that requests \nJSON data from the server
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server-->browser: [..., {"content":"Hello World","date":"2022-12-20T14:59:19.853Z"}]
+note right of browser: browser executes the event handler\n that renders notes to display

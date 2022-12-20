@@ -1,0 +1,6 @@
+title creating note in spa
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+note right of browser: Content-type: application/json\n{content: "FullStackOpen Course", date: "2022-12-20T16:08:04.545Z"}
+server-->browser: Status Code: 201
+note right of browser: browser executes the event handler\nthat renders note to display
